@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "a5ee8861-ae6a-4b2f-a36d-3a2692c7ac64",
+		"name": "Notifications Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3454378"
+	},
+	"item": [
+		{
+			"name": "/notifications",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recipientId\": \"0d33359b-8b1d-47cd-9361-ea2084bc5af9\",\r\n    \"content\": \"New notification\",\r\n    \"category\": \"social\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/notifications",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/notifications/count/from/:recipientId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/notifications/count/from/:recipientId",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications",
+						"count",
+						"from",
+						":recipientId"
+					],
+					"variable": [
+						{
+							"key": "recipientId",
+							"value": "0d33359b-8b1d-47cd-9361-ea2084bc5af9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/notifications/from/:recipientId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/notifications/from/:recipientId",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications",
+						"from",
+						":recipientId"
+					],
+					"variable": [
+						{
+							"key": "recipientId",
+							"value": "0d33359b-8b1d-47cd-9361-ea2084bc5af9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/notifications/:id/read",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/notifications/:id/read",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications",
+						":id",
+						"read"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "a4d1ee17-a383-4873-9a03-ae1c8d6161f0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/notifications/:id/unread",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/notifications/:id/unread",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications",
+						":id",
+						"unread"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "a4d1ee17-a383-4873-9a03-ae1c8d6161f0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/notifications/:id/cancel",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/notifications/:id/cancel",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"notifications",
+						":id",
+						"cancel"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "a4d1ee17-a383-4873-9a03-ae1c8d6161f0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
